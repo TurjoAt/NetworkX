@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled = true
+    }
+    sourceSets {
+        main {
+            res.srcDirs += [
+                    'src/main/res',
+                    'src/main/res/layouts',
+                    'src/main/res/layouts/layouts_category2'
+            ]
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    compile 'com.jakewharton:butterknife:7.0.1'
+}
