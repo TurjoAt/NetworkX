@@ -1,0 +1,69 @@
+- User
+	- id(row)
+	- user_code
+	- username
+	- password
+	- email
+	- phone number
+	- credit
+	- type (1=SysAdmin,2=Admin,3=user)
+	- status (normal/banned/suspend)
+	
+- User_details
+	- id
+ 	- user_code
+	- name
+	- sex (m/f/s)
+	- user_avatar
+	- birth_date
+	- country
+	- group (groupname=abc>member_code,member_code;grp_user>user_code)
+	- creation_time_ip
+	- created date
+	- device details
+	
+- Stuffs
+	- id
+	- user_code
+	- user_type
+	- assigned_role(chatroom1,chatroom2;global;)
+	- assigned_area (chatroom1,chatroom2;global;)
+	
+- Chatroom
+	- id
+	- Chatroom_Name
+	- Chatroom_Code/Hash
+	- Chatroom_Details(about)
+	- Chatroom_CreatedDate
+	- Created_By
+	- Chatroom_Region(location)
+	 
+- M_ChatRooms
+	- id
+	- Chatroom_Code/Hash
+	- current_user_list
+	- current_banned\suspend
+	
+- L_Acticity(user)
+	- id
+	- user_code
+	- log
+	- log_type
+	- log_time
+	
+- L_ChatRoom
+	- id
+	- Chatroom_Code/hash
+	- Message
+	- Message_By
+	- Time
+	- Ip
+- L_Sys
+	- id
+	- user_code
+	- log
+	- log_type
+	- log_time
+
+* M_ = manage
+* L_ = log
